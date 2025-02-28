@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+  <div th:fragment="header">
+    <div>
+    <h1> 학사프로그렘 </h1>
+    </div>
+    <ul class="nav nav-pills nav-fill">
+      <li class="nav-item">
+        <a class="nav-link" th:href="@{/}">홈으로</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" th:href="@{/content/list}">학생목록</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" th:href="@{/content/examInsert}">성적입력</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" th:href="@{/content/total}">학생성적</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">학생입력</a>
+      </li>
+    </ul>
+  </div>
+</html>
