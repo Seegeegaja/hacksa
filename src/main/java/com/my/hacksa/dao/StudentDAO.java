@@ -30,12 +30,15 @@ public class StudentDAO {
         em.persist(student);
 
     }
-
+//    "SELECT s FROM Student AS s " +
+//            "JOIN FETCH s.examList " +
+//            "ORDER BY s.student_id ASC";
+//SELECT * from student s left join exam e on s.student_id = e.student_id;
     public List<Student> AllList() {
-        String sql = "SELECT s FROM Student AS s " +
-                "JOIN FETCH s.examList " +
-                "ORDER BY s.student_id ASC";
+        String sql = "SELECT s FROM Student s LEFT JOIN Exam e ON s.student_id = e.student.student_id";
         List<Student> students = em.createQuery(sql , Student.class).getResultList();
         return students;
     }
+
+
 }

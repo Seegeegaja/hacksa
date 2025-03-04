@@ -15,6 +15,10 @@ public class ExamDto {
     private int hist;
     private String student_id;
 
+    public int getTotal(){
+        return kor + math + eng + hist;
+    }
+
     public ExamDto(Long id, int kor, int math, int eng, int hist, String student_id) {
         this.id = id;
         this.kor = kor;
