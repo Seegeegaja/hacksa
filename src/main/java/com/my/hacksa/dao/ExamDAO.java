@@ -13,4 +13,11 @@ public class ExamDAO {
     @Autowired
     EntityManager em;
 
+    public List<Exam> AllList() {
+        String sql = "SELECT e FROM Exam e " +
+                "ORDER BY e.student.student_id ASC";
+
+        List<Exam> examList = em.createQuery(sql).getResultList();
+        return examList;
+    }
 }
